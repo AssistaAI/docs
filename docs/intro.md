@@ -24,5 +24,5 @@ npx n8n
 ```
 ## What's next?
 
-- N8N configuration [N8N Configuration](/docs/category/n8n---configuration)
-- Agent actions [N8N Configuration](/docs/category/n8n---configuration)
+- N8N configuration [N8N Configuration](/docs/category/assista--n8n)
+- Agent actions [N8N Configuration](/docs/category/agent---action)
