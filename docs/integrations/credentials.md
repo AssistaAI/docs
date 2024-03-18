@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Credentials
@@ -8,7 +8,6 @@ sidebar_position: 1
   - [Authorize user](#authorize-user)
     - [Setup Omniauth provider](#setup-omniauth-provider)
     - [Building and saving the credential](#building-and-saving-the-credential)
-  - [Create the credential in N8N](#create-the-credential-in-n8n)
   - [Save the credential in our database](#save-the-credential-in-our-database)
   - [What's next?](#whats-next)
 
@@ -61,7 +60,7 @@ end
 ```
 
 ### Building and saving the credential
-The `omniauth` object passed earlier in the `@user.save_credential(omniauth)` should have all the tokens and data needed for N8N credential.
+The `omniauth` object passed earlier in the `@user.save_credential(omniauth)` should have all the tokens and data needed for integrations credential.
 - Firstly we should `find_or_create` a credential by name associated with the current user. In our case we will use the name given by the omniauth `gmailOAuth2`
 :::note
 Ensure you add the new name in the `app/models/credential.rb` **ALLOWED_NAMES** array
@@ -70,7 +69,7 @@ Ensure you add the new name in the `app/models/credential.rb` **ALLOWED_NAMES** 
 credential = credentials.find_or_create_by(name: 'gmailOAuth2')
 ```
 - Secondly We have to update the credential with the data from the omniauth object
-> **_`email:`_** will be used in n8n as the credential name
+> **_`email:`_** will be used in integrations as the credential name
 
 > **_`schema:`_** is a jsonb attribute and ca be different for each type of credential
 ```rb
@@ -92,11 +91,10 @@ credential.update(email: omniauth.dig('info', 'email'),
 
 
 
-## Create the credential in N8N
-tbc
 ## Save the credential in our database
 tbc
 
 ## What's next?
 
 - Read the [official documentation](https://docusaurus.io/)
+
