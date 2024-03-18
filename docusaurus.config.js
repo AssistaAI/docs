@@ -66,7 +66,7 @@ const config = {
       navbar: {
         title: 'Assista',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Assista Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -78,7 +78,7 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://assista.chat',
+            href: 'https://app.assista.us',
             label: 'Assista',
             position: 'right',
           },
